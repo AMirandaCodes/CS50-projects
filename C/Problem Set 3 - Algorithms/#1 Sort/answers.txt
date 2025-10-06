@@ -1,0 +1,26 @@
+sort1 uses: Bubble sort
+
+How do you know?: Runs much slower on reversed and random lists (up to 6.6s on 50,000 random numbers).
+Runs faster on already sorted lists compared to sort3.
+
+    Sorted takes 0.13s for 5000 items, 0.31s for 10000 items, and 0.364s for 50000 items.
+    Reversed takes 0.059s for 5000 items, 0.209s for 10000 items, and 5.201s for 50000 items.
+    Random takes 0.049s for 5000 items, 0.222s for 10000 items, and 6.626s for 5000 items.
+
+sort2 uses: Merge sort
+
+How do you know?: Always the fastest algorithm overall.
+Scales efficiently to 50,000 numbers with runtimes under half a second.
+
+    Sorted takes 0.017s for 5000 items, 0.031s for 10000 items, and 0.343s for 50000 items.
+    Reversed takes 0.010s for 5000 items, 0.024s for 10000 items, and 0.421s for 50000 items.
+    Random takes 0.016s for 5000 items, 0.030s for 10000 items, and 0.330s for 50000 items.
+
+sort3 uses: Selection sort
+
+How do you know?: Performance is consistent regardless of input order, but significantly slower than sort2.
+Takes ~2.9s on 50,000 numbers, which is worse than bubble sort for sorted inputs.
+
+    Sorted takes 0.038s for 5000 items, 0.119s for 10000 items, and 2.757s for 50000 items.
+    Reversed takes 0.045s for 5000 items, 0.146s for 10000 items, and 2.973s for 50000 items.
+    Random takes 0.041s for 5000 items, 0.133s for 10000 items, and 2.884s for 50000 items.
