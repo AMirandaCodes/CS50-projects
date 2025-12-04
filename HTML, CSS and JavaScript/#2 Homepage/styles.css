@@ -1,0 +1,123 @@
+/*Universal selector: Centers everything*/
+* {
+  text-align: center;
+  justify-content: center;
+}
+
+/*Sets background colour to black and page margins*/
+body{
+    background-color: black;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 50px;
+}
+
+/*Main titles at the top of the pages*/
+.main-titles {
+    color: white;
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+}
+
+/*Message button in Homepage*/
+#welcome-message{
+  color: white;
+  font-weight: bold;
+}
+
+/*Display and margin configuration for all images*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Style of normal text used*/
+.main-text {
+    color: white;
+    font-family: Georgia, serif;
+}
+
+/*Columns in Homepage*/
+.col {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.button, button {
+    background-color: black;
+    color: white;
+    text-decoration-line: none;
+    border: 2px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button:hover, button:hover {
+  background-color: #D22B2B;
+  color: white;
+}
+
+/*Top menu styling*/
+.custom-navbar {
+  background-color: black;
+  border-bottom: 2px solid white;
+}
+
+/*Centers links of top menu*/
+.navbar-nav {
+  display: flex;
+  width: 100%;
+}
+
+/*Colours of links in top menu*/
+.nav-link {
+  color: white !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/*Hover colour for links in top menu*/
+.nav-link:hover {
+  color: #D22B2B !important;
+}
+
+/*Active link (current page)*/
+.nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/*The hamburger button (only appears on mobile)*/
+.navbar-toggler {
+  border-color: white;
+  background-color: #D22B2B;
+}
+
+/*Accordion in Homepage*/
+.accordion-item {
+  background-color: black;
+  color: white;
+}
+
+.accordion-header {
+  background-color: black;
+}
+
+.accordion-button {
+  background-color: black;
+  color: white;
+}
+
+/*Table in 'My passion' page*/
+table, th, td {
+  border:1px solid white;
+}
