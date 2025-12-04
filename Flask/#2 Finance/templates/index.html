@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h2>Summary</h2>
+    {% if summary %}
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Stock symbol</th>
+                    <th>Number of shares</th>
+                    <th>Current price per stock</th>
+                    <th>Total value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in summary %}
+                <tr>
+                    <td>{{row.symbol}}</td>
+                    <td>{{row.shares}}</td>
+                    <td>{{row.price|usd}}</td>
+                    <td>{{row.holding_total|usd}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+        <p><b>You don't own any shares yet.</b></p>
+    {% endif %}
+
+    <div>
+        <p>Current cash: {{current_cash|usd}}</p>
+        <p>Grand total: {{grand_total|usd}}</p>
+    </div>
+    <form action="/" method="post">
+        <div class="mb-3">
+            <input name="cash" type="number" autocomplete="off" class="form-control mx-auto w-auto" placeholder="Add cash" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Add cash</button>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2>Previous transactions</h2>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Stock's symbol</th>
+                <th>Price at the time</th>
+                <th>Number of shares</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row.action}}</td>
+                <td>{{row.stock}}</td>
+                <td>{{row.price|usd}}</td>
+                <td>{{row.quantity}}</td>
+                <td>{{row.date}}</td>
+                <td>{{row.time}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
