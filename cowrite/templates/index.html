@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome to CoWrite!
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5 text-center">
+        <p id="index_main_title"></p>
+        <h3>A collaborative writing environment for writers</h3>
+        <br>
+        <a href="{{ url_for('new_codraft') }}" class="btn btn-lg custom-button-colour">
+            Start Draft
+        </a>
+    </div>
+{% endblock %}
